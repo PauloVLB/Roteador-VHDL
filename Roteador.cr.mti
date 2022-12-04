@@ -1,0 +1,31 @@
+D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/Comparador2.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/Comparador2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity Comparador2
+-- Compiling architecture structural of Comparador2
+
+} {} {}} D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/VHDL/ProjetoModelSim/Roteamento.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/VHDL/ProjetoModelSim/Roteamento.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity Main
+-- Compiling architecture structural of Main
+
+} {} {}} D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/SomadorCompleto.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/SomadorCompleto.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity SomadorCompleto
+-- Compiling architecture structural of SomadorCompleto
+
+} {} {}} D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/Comparador.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/Comparador.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity Comparador
+-- Compiling architecture structural of Comparador
+
+} {} {}} D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/Somador.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/UF/CircuitosLogicosTrabalhoFinal/Somador.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity Somador
+-- Compiling architecture structural of Somador
+
+} {} {}}
