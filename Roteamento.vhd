@@ -30,15 +30,16 @@ ARCHITECTURE structural OF Main IS
     SIGNAL t2 : BIT;
     SIGNAL t3 : BIT;
     SIGNAL t4 : BIT;
+    
     SIGNAL succX : BIT_VECTOR(3 DOWNTO 0);
     SIGNAL antX : BIT_VECTOR(3 DOWNTO 0);
     SIGNAL succY : BIT_VECTOR(3 DOWNTO 0);
     SIGNAL antY : BIT_VECTOR(3 DOWNTO 0);
 
-    SIGNAL XP : BIT;
-    SIGNAL XN : BIT;
-    SIGNAL YP : BIT;
-    SIGNAL YN : BIT;
+    SIGNAL modSuccX : BIT_VECTOR(3 DOWNTO 0);
+    SIGNAL modAntX : BIT_VECTOR(3 DOWNTO 0);
+    SIGNAL modSuccY : BIT_VECTOR(3 DOWNTO 0);
+    SIGNAL modAntY : BIT_VECTOR(3 DOWNTO 0);
 BEGIN
     sc1 : SomadorCompleto PORT MAP (a => x, b => "0001", cin => '0', cout => t1, sum => succX);
     sc2 : SomadorCompleto PORT MAP (a => x, b => "1111", cin => '0', cout => t2, sum => antX);
