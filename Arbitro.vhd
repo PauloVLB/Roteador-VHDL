@@ -48,15 +48,10 @@ architecture Behavioral of Arbitro is
         sum  : OUT BIT_VECTOR (3 DOWNTO 0));
     END COMPONENT;
 begin
-    -- y_n <= n_in(7 downto 4); 00010011
-    -- y_s <= s_in(7 downto 4);
-    -- x_l <= l_in(3 downto 0);
-    -- x_o <= o_in(3 downto 0);
-
-    sc3 : SomadorCompleto PORT MAP (a => n_in(7 downto 4), b => "0001", cin => '0', sum => y_n);
-    sc2 : SomadorCompleto PORT MAP (a => s_in(7 downto 4), b => "1111", cin => '0', sum => y_s);
-    sc1 : SomadorCompleto PORT MAP (a => l_in(3 downto 0), b => "1111", cin => '0', sum => x_l);
-    sc4 : SomadorCompleto PORT MAP (a => o_in(3 downto 0), b => "0001", cin => '0', sum => x_o);
+    sc3 : SomadorCompleto PORT MAP (a => n_in(3 downto 0), b => "0001", cin => '0', sum => y_n);
+    sc2 : SomadorCompleto PORT MAP (a => s_in(3 downto 0), b => "1111", cin => '0', sum => y_s);
+    sc1 : SomadorCompleto PORT MAP (a => l_in(7 downto 4), b => "1111", cin => '0', sum => x_l);
+    sc4 : SomadorCompleto PORT MAP (a => o_in(7 downto 4), b => "0001", cin => '0', sum => x_o);
 
     ptr_control : process(clk)
     begin
@@ -91,16 +86,9 @@ begin
     actl <= act(2);
     acto <= act(3);
     
-    p_out <= n_in(3 downto 0) & y_n when act(0) = '1' else
-             s_in(3 downto 0) & y_s when act(1) = '1' else
-             x_l & l_in(7 downto 4) when act(2) = '1' else
-             x_o & o_in(7 downto 4) when act(3) = '1' else
-             "00000000";
-
-    -- p_out <= n_in when act(0) = '1' else
-    --          s_in when act(1) = '1' else
-    --          l_in when act(2) = '1' else
-    --          o_in when act(3) = '1' else
-    --          "00000000";
-             
+    p_out <= n_in(7 downto 4) & y_n when act(0) = '1' else
+            s_in(7 downto 4) & y_s when act(1) = '1' else
+            x_l & l_in(3 downto 0) when act(2) = '1' else
+            x_o & o_in(3 downto 0) when act(3) = '1' else
+            "00000000";
 end architecture Behavioral;
