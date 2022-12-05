@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
  
-entity Bu is
+entity BufferFIFO is
   generic (
     g_WIDTH : natural := 8;
     g_DEPTH : natural := 4
@@ -21,9 +21,9 @@ entity Bu is
     o_rd_data : out bit_vector(g_WIDTH-1 downto 0);
     o_empty   : out bit
     );
-end entity Bu;
+end entity BufferFIFO;
  
-architecture rtl of Bu is
+architecture rtl of BufferFIFO is
   type t_FIFO_DATA is array (0 to g_DEPTH-1) of bit_vector(g_WIDTH-1 downto 0);
   signal r_FIFO_DATA : t_FIFO_DATA := (others => (others => '0'));
  
